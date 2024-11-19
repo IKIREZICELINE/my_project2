@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Day 3 - Mobile application</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="icons/bootstrap-icons.css">
+	<style>
+		li a{
+			opacity: 0.5;
+		}
+		li a.active{
+			opacity: 1;
+		}
+		.msg{
+			transition: 0.5s;
+		}
+		.msg:hover{
+			transform: scale(1.05);
+		}
+		.msg:active{
+			transform: scale(0.9);
+		}
+	</style>
+</head>
+<body>
+
+	<!-- Navigation bar -->
+	<section class="navigation-bar">	
+		<ul class="nav justify-content-center fixed-bottom p-3 bg-dark" style="border-radius: 15px 15px 0 0;">
+			<li onclick="loadPage('pages/home.html')"><a href="#" class="nav-link text-light active"><i class="bi bi-grid-1x2 h2 m-2"></i></a></li>
+			<li onclick="loadPage('pages/chats.html')"><a href="#" class="nav-link text-light"><i class="bi bi-chat-text h2 m-2"></i></a></li>
+			<li onclick="loadPage('pages/not.html')"><a href="#" class="nav-link text-light"><i class="bi bi-bell h2 m-2"></i></a></li>
+			<li onclick="loadPage('pages/settings.html')"><a href="#" class="nav-link text-light"><i class="bi bi-gear h2 m-2"></i></a></li>
+		</ul>
+	</section>
+
+	<!-- Main content -->
+	<section class="body-content">
+		<div class="container mt-2" id="body">
+			<div class="container text-center" style="transform: translateY(50%);">
+				<h1 class="bi bi-files" style="font-size:90px"></h1>
+				<h3>No page selected</h3>
+			</div>
+		</div>
+	</section>
+
+	<script type="text/javascript" src="main.js"></script>
+</body>
+</html>
